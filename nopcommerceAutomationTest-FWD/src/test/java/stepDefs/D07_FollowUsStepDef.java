@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class D07_FollowUsStepDef {
     P03_Homepage homepage = new P03_Homepage();
 
-    @When("user opens facbook link ")
+    @When("user opens facebook link ")
 
     public void open_facebook(){
         homepage.facebookBtn.click();
@@ -22,16 +22,31 @@ public class D07_FollowUsStepDef {
         homepage.twitterBtn.click();
     }
 
-    @When("user opens rss link ")
+   // @When("user opens rss link ")
 
-    public void open_rss(){
-        homepage.rssBtn.click();
+    //public void open_rss(){
+      //  homepage.rssBtn.click();
+    //}
+
+
+ //   @Then("{string} is opened in a new tab")
+
+   // public void check_link(String link ) throws InterruptedException {
+     //   Thread.sleep(2000);
+       // ArrayList<String> tabs =new ArrayList<>(Hooks.driver.getWindowHandles());
+        //Hooks.driver.switchTo().window(tabs.get(1));
+        //Assert.assertEquals(Hooks.driver.getCurrentUrl(),link);
+        //Hooks.driver.close();
+        //Hooks.driver.switchTo().window(tabs.get(0));
+    //}
+
+
+    @When("user opens facebook link")
+    public void userOpensFacebookLink() {homepage.facebookBtn.click();
     }
 
-
-    @Then("{string} is opened in a new tab")
-
-    public void check_link(String link ) throws InterruptedException {
+    @Then("{string} is opened in new tab")
+    public void isOpenedInNewTab(String link)throws InterruptedException {
         Thread.sleep(2000);
         ArrayList<String> tabs =new ArrayList<>(Hooks.driver.getWindowHandles());
         Hooks.driver.switchTo().window(tabs.get(1));
@@ -40,5 +55,11 @@ public class D07_FollowUsStepDef {
         Hooks.driver.switchTo().window(tabs.get(0));
     }
 
+    @When("user opens rss link")
+    public void userOpensRssLink() { homepage.rssBtn.click();
+    }
 
+    @When("user opens youtube link")
+    public void userOpensYoutubeLink() {homepage.youtubeBtn.click();
+    }
 }

@@ -19,34 +19,57 @@ public class D02_LoginStepDef {
         login.loginBtn.click();
     }
 
-    @When("user login with \"valid\" \"(.*)\" and \"(.*)\"$")
-    public void enter_valid_email_and_pass(String email,String password){
-        login.EmailField.sendKeys(email);
-        login.PassField.sendKeys(password);
-    }
-     @When("^user login with \"invalid\" \"(.*)\" and \"(.*)\"$")
-     public void enter_invalid_email_and_pass(String email,String password){
-         login.EmailField.sendKeys(email);
-         login.PassField.sendKeys(password);}
+    //@When("user login with \"valid\" \"(.*)\" and \"(.*)\"$")
+    //public void enter_valid_email_and_pass(String email,String password){
+      //  login.EmailField.sendKeys(email);
+        //login.PassField.sendKeys(password);
+    //}
+    // @When("^user login with \"invalid\" \"(.*)\" and \"(.*)\"$")
+     //public void enter_invalid_email_and_pass(String email,String password){
+       //  login.EmailField.sendKeys(email);
+         //login.PassField.sendKeys(password);}
     @And("user press on login button")
     public void login_finish(){
         login.finishloginBtn.click();
     }
-    @Then("user login to the system successfully")
-    public void check_login_success(){
+    //@Then("user login to the system successfully")
+    //public void check_login_success(){
+      //  soft.assertEquals(Hooks.driver.getCurrentUrl(),"https://demo.nopcommerce.com/","First Assertion");
+        //soft.assertTrue(login.MyAccountTab.isEnabled(),"second Assertion");
+        //soft.assertAll();
+    //}
+
+  //  @Then("user could not login to the system")
+   // public void check_login_fail(){
+   //     soft.assertTrue(login.FailMessage.getText().contains("login was unsuccessful."),"First Assertion");
+    //    String color= Color.fromString(login.FailMessage.getCssValue("color")).asHex();
+   //     soft.assertTrue(color.equals("#e4434b"),"second Assertion");
+    //    soft.assertAll();
+
+ //   }
+
+
+    @When("user go to login with valid {string} and {string}")
+    public void userGoToLoginWithValidAnd(String email, String password) { login.EmailField.sendKeys(email);
+        login.PassField.sendKeys(password);
+    }
+
+    @Then("user login with to the system successfully")
+    public void userLoginWithToTheSystemSuccessfully() {
         soft.assertEquals(Hooks.driver.getCurrentUrl(),"https://demo.nopcommerce.com/","First Assertion");
         soft.assertTrue(login.MyAccountTab.isEnabled(),"second Assertion");
         soft.assertAll();
     }
 
-    @Then("user could not login to the system")
-    public void check_login_fail(){
-        soft.assertTrue(login.FailMessage.getText().contains("login was unsuccessful."),"First Assertion");
+    @When("user go to login with invalid {string} and {string}")
+    public void userGoToLoginWithInvalidAnd(String email, String password) { login.EmailField.sendKeys(email);
+        login.PassField.sendKeys(password);
+    }
+
+    @Then("user could not  login  to the system successfully")
+    public void userCouldNotLoginToTheSystemSuccessfully() {     soft.assertTrue(login.FailMessage.getText().contains("login was unsuccessful."),"First Assertion");
         String color= Color.fromString(login.FailMessage.getCssValue("color")).asHex();
         soft.assertTrue(color.equals("#e4434b"),"second Assertion");
         soft.assertAll();
-
     }
-
-
 }

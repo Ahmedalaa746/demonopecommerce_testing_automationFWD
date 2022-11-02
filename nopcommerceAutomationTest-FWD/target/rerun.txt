@@ -1,8 +1,8 @@
-file:src/main/resources/features/F07_FollowUs.feature:5:9:13:17
-file:src/main/resources/features/F05_hovercategores.feature:4
-file:src/main/resources/features/F04_Search.feature:9:10:11:19:20:21:22
-file:src/main/resources/features/F02_Login.feature:4:10
-file:src/main/resources/features/F08_WishList.feature:4:8
-file:src/main/resources/features/F06_homeSliders.feature:4:8
-file:src/main/resources/features/F03_Currencies.feature:3
-file:src/main/resources/features/F01_Registeration.feature:5
+file:src/main/resources/Features/F03_Currencies.feature:3
+file:src/main/resources/Features/F04_Search.feature:9:10:11:19:20:21:22
+file:src/main/resources/Features/F01_Registeration.feature:5
+file:src/main/resources/Features/F08_WishList.feature:4:8
+file:src/main/resources/Features/F05_hovercategores.feature:4
+file:src/main/resources/Features/F07_FollowUs.feature:5:9:13:17
+file:src/main/resources/Features/F06_homeSliders.feature:4:8
+file:src/main/resources/Features/F02_Login.feature:4:10
