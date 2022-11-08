@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="20" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="20" time="0.506">
-    <testcase classname="Registration users could register by new accounts" name="guest users could register by valid data successfully" time="0.009">
+<testsuite errors="0" failures="20" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="20" time="0.57">
+    <testcase classname="Registration users could register by new accounts" name="guest users could register by valid data successfully" time="0.007">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given user go to register page..............................................undefined
 When user select gender type................................................skipped
 And user enter first name "automation" and last name "tester"...............skipped
@@ -60,7 +60,7 @@ When user clicks on the product in search result............................skip
 Then the sku shown in this page contains the APPLE_CAM that was used in search.skipped
 ]]></failure>
     </testcase>
-    <testcase classname="F04_Search | users could use search functionality to use find products" name="user could search for product using sku 3" time="0">
+    <testcase classname="F04_Search | users could use search functionality to use find products" name="user could search for product using sku 3" time="0.001">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given user typed SF_PRO_11 in search box and pressed search.................undefined
 When user clicks on the product in search result............................skipped
 Then the sku shown in this page contains the SF_PRO_11 that was used in search.skipped
@@ -88,12 +88,12 @@ Then check if url is nokia url..............................................skip
 Then check if url is iphone url.............................................skipped
 ]]></failure>
     </testcase>
-    <testcase classname="F07_followUs | users could open followUs links" name="user opens facebook link" time="0.001">
+    <testcase classname="F07_followUs | users could open followUs links" name="user opens facebook link" time="0">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[When user opens facebook link...............................................undefined
 Then "https://www.facebook.com/nopCommerce" is opened in new tab............skipped
 ]]></failure>
     </testcase>
-    <testcase classname="F07_followUs | users could open followUs links" name="user opens twitter link" time="0.001">
+    <testcase classname="F07_followUs | users could open followUs links" name="user opens twitter link" time="0.002">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[When user opens twitter link................................................undefined
 Then "https://twitter.com/nopCommerce" is opened in new tab.................skipped
 ]]></failure>
@@ -113,7 +113,7 @@ Then "https://www.youtube.com/user/nopCommerce" is opened in new tab........skip
 Then user will see a green success message..................................skipped
 ]]></failure>
     </testcase>
-    <testcase classname="F08_Wishlist | users could add an item to their wishlist and then check it out later" name="user adds an item to the wishlist and checks wishlist" time="0.001">
+    <testcase classname="F08_Wishlist | users could add an item to their wishlist and then check it out later" name="user adds an item to the wishlist and checks wishlist" time="0">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[When user clicks on wishlist button on product..............................undefined
 And user clicks on wishlist.................................................skipped
 Then user will see product in wishlist......................................skipped

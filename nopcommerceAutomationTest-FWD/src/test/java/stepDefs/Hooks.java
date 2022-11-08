@@ -25,7 +25,7 @@ public class Hooks {
         driver.manage().window().maximize();
 
            //3.2 - Implicate wait
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         //4-Navigate to Url
 
@@ -35,7 +35,7 @@ public class Hooks {
     @After
 
     public static void QuitDriver()throws InterruptedException{
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         driver.quit();
     }
 }

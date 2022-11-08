@@ -34,7 +34,7 @@ public class D05_hovercategoriesStepDef {
         actions.moveToElement(maincategorries.get(selectedCategory)).perform();
         selectedMainCategoryText = maincategorries.get(selectedCategory).getText();
         System.out.println("Main category is selected: "+ selectedMainCategoryText);
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
     }
 
@@ -43,13 +43,13 @@ public class D05_hovercategoriesStepDef {
         selectedCategory=selectedCategory + 1 ;
         locator = "(//ul[@class='top-menu notmobile']//ul)[" + selectedCategory + "]/li";
         subCategoryLinks = Hooks.driver.findElements(By.xpath(locator));
-        Hooks.driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        Hooks.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
     }
 
     @Then("user can select sub category or open main category")
     public void selectSubOrMaincategory() throws InterruptedException{
-        if (selectedCategory > 0 && selectedCategory <= 3) {
+        if (selectedCategory > 0 && selectedCategory <= 4) {
             int count = subCategoryLinks.size();
             int min = 0;
             int max = count - 1;
@@ -57,7 +57,7 @@ public class D05_hovercategoriesStepDef {
             actions.moveToElement(subCategoryLinks.get(selectedSubCategory)).perform();
             selectedSubCategoryText = subCategoryLinks.get(selectedSubCategory).getText();
             System.out.println("Sub category is selected:   " + selectedSubCategoryText);
-            Thread.sleep(2000);
+            Thread.sleep(3000);
             subCategoryLinks.get(selectedSubCategory).click();
             softAssert.assertEquals(hoverCategory.get_page_title().getText().toLowerCase().trim(), selectedSubCategoryText.toLowerCase().trim());
             softAssert.assertAll();
@@ -67,6 +67,6 @@ public class D05_hovercategoriesStepDef {
             softAssert.assertEquals(hoverCategory.get_page_title().getText().toLowerCase().trim(), selectedMainCategoryText.toLowerCase().trim());
             softAssert.assertAll();
         }
-        Hooks.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);}
+        Hooks.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);}
 
 }

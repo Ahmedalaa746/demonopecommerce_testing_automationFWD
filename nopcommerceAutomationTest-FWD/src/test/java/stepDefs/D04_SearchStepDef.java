@@ -65,8 +65,8 @@ public class D04_SearchStepDef {
     public void searchShowsRelevantResultsThatContainName(String name) {
         List<WebElement> results = Hooks.driver.findElements(By.className("product-title"));
         int count = results.size();
-        for (int i = 0; i < count; i++) {
-            soft.assertTrue(results.get(i).getText().toLowerCase().contains(name));
+        for (WebElement result : results) {
+            soft.assertTrue(result.getText().toLowerCase().contains(name));
         }
 
         soft.assertAll();
